@@ -1,6 +1,12 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+/* Developed by Lander V
+ * Buy me a beer: 1KBkk4hDUpuRKckMPG3PQj3qzcUaQUo7AB (BTC)
+ * 
+ * Many thanks to HaasOnline!
+ */
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +23,6 @@ namespace Cryptsy
         public Int64 MarketID { get; private set; }
         public decimal Volume { get; private set; }
         public Trade LastTrade { get; private set; }
-
-
         public List<Trade> RecentTrades { get; private set; } //null if MatketInfo was loaded with basicInfoOnly = true
 
         public OrderBook OrderBook { get; private set; } /* Can contain: - null if MarketInfo was loaded with basicInfoOnly = true

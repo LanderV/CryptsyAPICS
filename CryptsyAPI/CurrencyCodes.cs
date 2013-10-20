@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Developed by Lander V
+ * Buy me a beer: 1KBkk4hDUpuRKckMPG3PQj3qzcUaQUo7AB (BTC)
+ * 
+ * Many thanks to HaasOnline!
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

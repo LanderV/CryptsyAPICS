@@ -384,10 +384,14 @@ namespace Cryptsy
             }
 
 
-
-            var request = WebRequest.Create(new Uri(url));
+            // To handle cookies we needed a HttpWebRequest instead of a WebRequest
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
             if (request == null)
                 throw new Exception("Non HTTP WebRequest");
+
+            // Add cookie handling for the request
+            CookieContainer cookieJar = new CookieContainer();
+            request.CookieContainer = cookieJar;
 
             if (authenticate)
             {
